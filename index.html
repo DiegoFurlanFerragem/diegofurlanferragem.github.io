@@ -1,39 +1,145 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Diego Furlan Ferragem</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.png" type="image/png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Diego Furlan Ferragem - Ferragens, reparos, obras e Metal Forte em Santa Maria, RS">
+  <title>Diego Furlan Ferragem</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #FFD700, #0a0a23); /* amarelo topo, azul escuro fundo */
+      color: #fff;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    header img {
+      max-width: 200px;
+      filter: drop-shadow(2px 2px 4px #000);
+    }
+
+    .horario {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+
+    .locais, .servicos {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+    }
+
+    .locais h2, .servicos h2 {
+      border-bottom: 1px solid #fff;
+      padding-bottom: 5px;
+    }
+
+    .locais p, .servicos p {
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .contatos a {
+      color: #00ffcc;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .produtos {
+      max-width: 800px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .produtos table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #fff;
+    }
+
+    .produtos th, .produtos td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .icones {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <img src="logo.png" alt="Logo Diego Furlan Ferragem" class="logo" />
-        <h1>Diego Furlan Ferragem</h1>
-    </header>
+  <header>
+    <img src="logo.png" alt="Logo Diego Furlan Ferragem">
+  </header>
 
-    <section class="contato">
-        <h2>Contato e Redes Sociais</h2>
-        <a class="btn" href="https://wa.me/555532176567" target="_blank">📲 WhatsApp - Castro Alves</a>
-        <a class="btn" href="https://wa.me/555533477478" target="_blank">📲 WhatsApp - João Goulart</a>
-        <a class="btn" href="https://wa.me/555530330888" target="_blank">📲 WhatsApp - Paulo Lauda</a>
-        <a class="btn" href="https://www.instagram.com/grupodiegofurlan" target="_blank">📸 Instagram</a>
-    </section>
+  <div class="horario">
+    <h3>Atendimento de segunda à sábado:</h3>
+    <p>08:30h às 12:00h | 14:00h às 18:30h</p>
+  </div>
 
-    <section class="enderecos">
-        <h2>Endereços</h2>
-        <ul>
-            <li><b>Rua Castro Alves, 90</b><br>Entrada do Bairro Chácara das flores.<br>📞 (55) 3217-6567</li>
-            <li><b>Rua Euclides da Cunha, 1267</b><br>Bairro João Goulart.<br>📞 (55) 3347-7478</li>
-            <li><b>Avenida Paulo Lauda, 255</b><br>Bairro Tancredo Neves.<br>📞 (55) 3033-0888</li>
-        </ul>
-        <p>🕒 Atendimento de segunda à sábado: <br>08:30h às 12:00h | 14:00h às 18:30h</p>
-    </section>
+  <div class="locais">
+    <h2>📍 Nossos Endereços</h2>
+    <p>Rua Castro Alves, 90 – Chácara das flores – Fone: (55) 3217-6567</p>
+    <p>Rua Euclides da Cunha, 1267 – João Goulart – Fone: (55) 3347-7478</p>
+    <p>Avenida Paulo Lauda, 255 – Tancredo Neves – Fone: (55) 3033-0888</p>
+  </div>
 
-    <footer>
-        <p>© 2025 Diego Furlan Ferragem</p>
-    </footer>
+  <div class="servicos">
+    <h2>🛠 Serviços</h2>
+    <p><span class="icones">🛠</span> Loja de Ferragens</p>
+    <p><span class="icones">⚒</span> Serviços de reparos e obras em geral</p>
+    <p><span class="icones">🏗️</span> Representante comercial Metal Forte</p>
+    <p><span class="icones">📲</span> Faça seu agendamento</p>
+  </div>
+
+  <div class="produtos">
+    <h2>💰 Produtos e Preços com Cashback</h2>
+    <table>
+      <tr><th>Produto</th><th>Preço</th><th>Cashback</th><th>Custo Real</th></tr>
+      <tr><td>5mg</td><td>R$ 77,60</td><td>R$ 3,88</td><td>R$ 73,72</td></tr>
+      <tr><td>10mg</td><td>R$ 78,80</td><td>R$ 3,94</td><td>R$ 74,86</td></tr>
+      <tr><td>20mg</td><td>R$ 86,20</td><td>R$ 4,31</td><td>R$ 81,89</td></tr>
+      <tr><td>40mg</td><td>R$ 102,90</td><td>R$ 5,14</td><td>R$ 97,76</td></tr>
+      <tr><td>80mg</td><td>R$ 116,80</td><td>R$ 5,84</td><td>R$ 110,96</td></tr>
+      <tr><td>120mg</td><td>R$ 122,60</td><td>R$ 6,13</td><td>R$ 116,47</td></tr>
+    </table>
+    <p>Parcelamos suas compras em até 6x sem juros. Ganhe 5% em Cashback em suas compras.</p>
+  </div>
+
+  <footer>
+    <div class="contatos">
+      <a href="https://wa.me/5555999999999" target="_blank">WhatsApp</a> |
+      <a href="https://www.instagram.com/grupodiegofurlan" target="_blank">Instagram</a> |
+      <a href="https://goo.gl/maps/abc123" target="_blank">Google Maps</a>
+    </div>
+    <p>Obrigado por ser um cliente fiel. Valorizamos sua confiança!</p>
+  </footer>
 </body>
+
 </html>
