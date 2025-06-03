@@ -1,0 +1,70 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    background: linear-gradient(to bottom, #002f6c 0%, #ffc800 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 200px;
+    transition: transform 1s ease-in-out;
+}
+
+.move-left {
+    transform: translateX(-200px);
+}
+
+.info-box {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #002f6c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+.services p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.socials {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: white;
+    color: #002f6c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.social-icon.whatsapp {
+    background-color: #25d366;
+    color: white;
+}
+
+.social-icon.instagram {
+    background-color: #e1306c;
+    color: white;
+}

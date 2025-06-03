@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diego Furlan Ferragem</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+    <header class="hero">
+        <img src="logo.png" alt="Logo Diego Furlan Ferragem" class="logo" />
+        <div class="info-box hidden" id="infoBox">
+            <div class="services">
+                <p>🛠 | Loja de Ferragens</p>
+                <p>⚒ | Serviços de reparos e obras em geral</p>
+                <p>🏗️ | Representante comercial Metal Forte</p>
+                <p>📲 | Faça seu agendamento</p>
+            </div>
+            <div class="socials">
+                <a href="https://wa.me/5555991985369" target="_blank" class="social-icon whatsapp">WhatsApp</a>
+                <a href="https://instagram.com/grupodiegofurlan" target="_blank" class="social-icon instagram">Instagram</a>
+            </div>
+        </div>
+    </header>
+    <script>
+        window.onload = () => {
+            const logo = document.querySelector('.logo');
+            const infoBox = document.getElementById('infoBox');
+            setTimeout(() => {
+                logo.classList.add('move-left');
+                infoBox.classList.remove('hidden');
+            }, 1000);
+        };
+    </script>
+</body>
+</html>
