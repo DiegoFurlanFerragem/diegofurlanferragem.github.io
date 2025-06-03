@@ -1,38 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diego Furlan Ferragem</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diego Furlan Ferragem</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png">
 </head>
+
 <body>
-    <header class="hero">
-        <img src="logo.png" alt="Logo Diego Furlan Ferragem" class="logo" />
-        <div class="info-box hidden" id="infoBox">
-            <div class="services">
-                <p>🛠 | Loja de Ferragens</p>
-                <p>⚒ | Serviços de reparos e obras em geral</p>
-                <p>🏗️ | Representante comercial Metal Forte</p>
-                <p>📲 | Faça seu agendamento</p>
-            </div>
-            <div class="socials">
-                <a href="https://wa.me/5555991985369" target="_blank" class="social-icon whatsapp">WhatsApp</a>
-                <a href="https://instagram.com/grupodiegofurlan" target="_blank" class="social-icon instagram">Instagram</a>
-            </div>
-        </div>
-    </header>
-    <script>
-        window.onload = () => {
-            const logo = document.querySelector('.logo');
-            const infoBox = document.getElementById('infoBox');
-            setTimeout(() => {
-                logo.classList.add('move-left');
-                infoBox.classList.remove('hidden');
-            }, 1000);
-        };
-    </script>
+  <div class="container">
+    <img src="logo.png" alt="Logo Diego Furlan Ferragem" class="logo move-left" />
+    <div class="info-box hidden">
+      <div class="contact-icons">
+        <a href="https://wa.me/5555991985369" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="icon" />
+        </a>
+        <a href="https://instagram.com/grupodiegofurlan" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="Instagram" class="icon" />
+        </a>
+      </div>
+      <p>🛠 | Loja de Ferragens</p>
+      <p>⚒ | Serviços de reparos e obras em geral</p>
+      <p>🏗️ | Representante comercial Metal Forte</p>
+      <p>📲 | Faça seu agendamento</p>
+      <p><strong>Atendimento de segunda à sábado:</strong><br>08:30h às 12:00h | 14:00h às 18:30h</p>
+    </div>
+  </div>
+
+  <script>
+    window.onload = () => {
+      setTimeout(() => {
+        const logo = document.querySelector('.logo');
+        const infoBox = document.querySelector('.info-box');
+        logo.classList.add('to-left');
+        setTimeout(() => {
+          infoBox.classList.remove('hidden');
+        }, 1000);
+      }, 1000);
+    };
+  </script>
 </body>
+
 </html>
