@@ -12,7 +12,7 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to bottom, #FFD700, #002147); /* amarelo pro azul escuro */
+      background: linear-gradient(to bottom, #FFD700, #002147);
       color: white;
       overflow-x: hidden;
     }
@@ -26,7 +26,7 @@
 
     .logo {
       width: 180px;
-      transition: transform 1s ease;
+      transition: transform 1s ease, left 1s ease;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -34,7 +34,7 @@
 
     .logo.mover {
       left: 80px;
-      transform: translateX(0);
+      transform: none;
     }
 
     .info-box {
@@ -45,16 +45,13 @@
       opacity: 0;
       transform: translateY(20px);
       transition: all 1s ease;
-      margin-left: 260px;
+      position: absolute;
+      left: 280px;
     }
 
     .info-box.aparecer {
       opacity: 1;
       transform: translateY(0);
-    }
-
-    .info-box h2 {
-      margin-top: 0;
     }
 
     .servicos {
@@ -81,7 +78,8 @@
       }
 
       .info-box {
-        margin-left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         margin-top: 250px;
       }
 
