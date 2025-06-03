@@ -1,46 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Diego Furlan Ferragem</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.png" type="image/png">
-</head>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="favicon.png" type="image/png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #FFD700, #002147); /* amarelo pro azul escuro */
+      color: white;
+      overflow-x: hidden;
+    }
 
+    .container {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      padding: 40px;
+    }
+
+    .logo {
+      width: 180px;
+      transition: transform 1s ease;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .logo.mover {
+      left: 80px;
+      transform: translateX(0);
+    }
+
+    .info-box {
+      background-color: rgba(0, 33, 71, 0.95);
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 450px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+      margin-left: 260px;
+    }
+
+    .info-box.aparecer {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .info-box h2 {
+      margin-top: 0;
+    }
+
+    .servicos {
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .icones a {
+      color: white;
+      font-size: 24px;
+      margin-right: 15px;
+      transition: transform 0.2s;
+    }
+
+    .icones a:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .info-box {
+        margin-left: 0;
+        margin-top: 250px;
+      }
+
+      .logo.mover {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
 <body>
   <div class="container">
-    <img src="logo.png" alt="Logo Diego Furlan Ferragem" class="logo move-left" />
-    <div class="info-box hidden">
-      <div class="contact-icons">
-        <a href="https://wa.me/5555991985369" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="icon" />
+    <img src="logo.png" alt="Logo Diego Furlan Ferragem" class="logo" id="logo"/>
+    <div class="info-box" id="info">
+      <div class="servicos">
+        🛠 | Loja de Ferragens<br/>
+        ⚒ | Serviços de reparos e obras em geral<br/>
+        🏗️ | Representante comercial Metal Forte<br/>
+        📲 | Faça seu agendamento
+      </div>
+      <div class="icones">
+        <a href="https://wa.me/5555991985369" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="https://instagram.com/grupodiegofurlan" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="Instagram" class="icon" />
+        <a href="https://instagram.com/grupodiegofurlan" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
         </a>
       </div>
-      <p>🛠 | Loja de Ferragens</p>
-      <p>⚒ | Serviços de reparos e obras em geral</p>
-      <p>🏗️ | Representante comercial Metal Forte</p>
-      <p>📲 | Faça seu agendamento</p>
-      <p><strong>Atendimento de segunda à sábado:</strong><br>08:30h às 12:00h | 14:00h às 18:30h</p>
     </div>
   </div>
 
   <script>
     window.onload = () => {
       setTimeout(() => {
-        const logo = document.querySelector('.logo');
-        const infoBox = document.querySelector('.info-box');
-        logo.classList.add('to-left');
-        setTimeout(() => {
-          infoBox.classList.remove('hidden');
-        }, 1000);
+        document.getElementById('logo').classList.add('mover');
+        document.getElementById('info').classList.add('aparecer');
       }, 1000);
     };
   </script>
 </body>
-
 </html>
+
